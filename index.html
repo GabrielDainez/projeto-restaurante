@@ -1,0 +1,545 @@
+<!-- resources/views/layout.blade.php -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seu Restaurante</title>
+    
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+ 
+
+</head>
+<body>
+
+
+    <header class="fixed top-0 w-full z-50 bg-custom-dark">
+        <nav class="mx-auto flex max-w-9xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+          <div class="flex lg:flex-1">
+            <a href="#" class="-m-1.5 p-1.5">
+              <span class="sr-only">Your Company</span>
+              <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="">
+            </a>
+          </div>
+          <div class="flex lg:hidden">
+            <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+              <span class="sr-only">Open main menu</span>
+              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              </svg>
+            </button>
+          </div>
+          <div class="hidden lg:flex lg:gap-x-12">
+            <a href="#" class="item-nav text-18px font-semibold leading-6 text-white">Página Inicial</a>
+      
+            <a href="#" class="item-nav text-18px font-semibold leading-6 text-white">Cardápio</a>
+            <a href="#" class="item-nav text-18px font-semibold leading-6 text-white">Sobre Nós</a>
+            <a href="#" class="item-nav text-18px font-semibold leading-6 text-white">Reserva</a>
+          </div>
+          <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+            <div class="flex gap-4">
+              <a href="/login" class="text-18px font-semibold leading-6 text-white"> <span aria-hidden="true"><i class="fas fa-user"></i> Entrar</a>
+              <a href="/register" class="text-18px font-semibold leading-6 text-white"> <span aria-hidden="true"> Cadastrar</a>
+            </div>
+          </div>
+          
+    
+              </div>
+            </div>
+          </div>
+          <link href="{{ asset('css/nav-2.css') }}" rel="stylesheet">
+          <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+        </div>
+      </header>
+      
+
+
+
+
+<main>
+<article>
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="2000">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="img/hero-slider-1.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption">
+              <h5 class="text-hero display1 hero-tittle">Nossa cultura <br> através da culinária</h5>
+              <p class="text-hero1">Junte família e amigos e venha desfrutar da alta gastronomia</p>
+              <button class="meu-btn">Nosso cardápio</button>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="img/hero-slider-2.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption">
+              <h5 class="text-hero display1 hero-tittle" >Onde cada sabor <br>
+                conta uma história</h5>
+              <p class="text-hero2"> Junte família e amigos e venha desfrutar da alta gastronomia
+                </p>
+              <button class="meu-btn">Nosso cardápio</button>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="img/hero-slider-3.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption">
+              <h5 class="text-hero display1 hero-tittle">Em nome da comida irresistível</h5>
+              <p class="text-hero2 body-2">Junte família e amigos e venha desfrutar da alta gastronomia</p>
+              <button class="meu-btn">Nosso cardápio</button>
+            </div>
+          </div>
+        </div>
+
+       <!-- Botão de navegação "Anterior" -->
+ <button class="btn btn-carrossel carousel-control-prev btn-anterior" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Anterior</span>
+  </button>
+  
+  <!-- Botão de navegação "Próximo" -->
+  <button class="btn btn-carrossel carousel-control-next btn-sucessor" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+    <span class="carousel-control-next-icon " aria-hidden="true"></span>
+    <span class="visually-hidden">Próximo</span>
+  </button>
+
+      </div>
+
+<section class="conteudo-categoria section-dark">
+        <div class="container">
+            <h2 class="section-title">Culinária De Alto Nível</h2>
+            <p class="section-text ">Deleite-se com o extraordinário a cada garfada, onde cada prato é uma verdadeira obra de arte culinária para ser apreciada.</p>
+        <div class="row">
+          <div class="col-sm grid-item">
+            <a href="#">
+              <figure class="card-banner img-holder" style="--width: 285; --height: 336;">
+                <img src="img/cafe-da-manha.jpg" >
+              </figure>
+            </a>
+              <div>
+              <p class="grid-text">Café Da Manhã </p>
+              <a href="#" class="link-underline" ><p class="grid-text2">Ver no menu</p></a>
+            </div>
+          </div>
+          <div class="col-sm grid-item">
+            <a href="#">
+              <figure class="card-banner img-holder" style="--width: 285; --height: 336;">
+                <img src="img/jantar-2.jpg" >
+              </figure>
+            </a>
+              <div>
+              <p class="grid-text">Prato principal </p>
+              <a href="#" class="link-underline" ><p class="grid-text2">Ver no menu</p></a>
+            </div>
+          </div>
+        
+          <div class="col-sm grid-item" >
+            <a href="#">
+              <figure class="card-banner img-holder" style="--width: 285; --height: 336;">
+                <img src="img/drink.jpg" >
+              </figure>
+            </a>
+              <div>
+              <p class="grid-text">Bebidas </p>
+              <a href="#" class="link-underline" ><p class="grid-text2">Ver no menu</p></a>
+            </div>
+          </div>
+      </div>
+      <img class="img-fundo2" src="img/shape-2.png" >
+      <img class="img-fundo1" src="img/shape-1.png" >
+    </div>
+</section>
+
+<section class="section-about">
+      <div class="container container-about"><div class="about-content">
+      <p class="about-title section-subtitle">Nossa historia</p>
+      <h1 class="about-phrase">Cada garfada é um capítulo único e memorável.</h1>
+      <p class="about-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur nobis obcaecati dicta ut exercitationem, illo sunt dolorum eum tempora vero culpa repudiandae dolores quo ipsa natus dolore eaque. Esse, cumque?
+      <br> <br>  Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, numquam inventore odit aliquam deserunt delectus magni natus voluptatem obcaecati velit mollitia nemo, blanditiis molestiae sapiente quo eaque eum? Hic, autem?</p> 
+      <p>Tire suas dúvidas</p>
+      <p class="num">21 90000-9999</p> 
+      <button class="meu-btn">WhatsApp</button>
+      </div>
+    <div class="img-about">
+      <figure class="about-figure">
+        <img src="img/restaurante-3.jpg" >
+      </figure>
+    </div>
+    </div>
+</section>
+
+<section class="section-menu section-dark">
+  <div class="container">
+
+    <div class="menu-text">
+      <p class="section-subtitle section-subtitle">Seleção especial</p>
+      <h1 class="headline-1 section-title">Nosso Incrível Cardápio</h1>
+    </div>
+
+    <ul class="grid-list">
+
+
+      <li>
+        <div class="menu-card hover:card">
+
+          <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+            <img src="img/prato-2.jpg" width="100" height="100" loading="lazy" alt=""
+            class="img-cover">
+          </figure>
+
+          <div>
+
+            <div class="title-wrapper">
+              <h3 class="title-3">
+                <p class="card-title"> Virada paulista</p>
+              </h3>
+              
+              <span class="span title-2">R$ 33.89</span>
+            </div>
+
+            <p class="card-text label-1">
+                Arroz, carne de porco, ovo frito, linguiça, couve, torresmo e banana.
+            </p>
+
+          </div>
+
+        </div>
+      </li>
+
+      <li>
+        <div class="menu-card hover:card">
+
+          <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+            <img src="img/prato-1.jpg" width="100" height="100" loading="lazy" alt="{{ $prato->nome }}"
+            class="img-cover">
+          </figure>
+
+          <div>
+
+            <div class="title-wrapper">
+              <h3 class="title-3">
+                <p class="card-title"> Frango empanado</p>
+              </h3>
+              
+              <span class="span title-2">R$ 29,90</span>
+            </div>
+
+            <p class="card-text label-1">
+                Arroz, feijão, frango empanado e salada
+            </p>
+
+          </div>
+
+        </div>
+      </li>
+
+      <li>
+        <div class="menu-card hover:card">
+
+          <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+            <img src="img/prato-3.jpg" width="100" height="100" loading="lazy" alt="{{ $prato->nome }}"
+            class="img-cover">
+          </figure>
+
+          <div>
+
+            <div class="title-wrapper">
+              <h3 class="title-3">
+                <p class="card-title">Baião de dois</p>
+              </h3>
+              
+              <span class="span title-2">R$ 32,90</span>
+            </div>
+
+            <p class="card-text label-1">
+                Arroz, feijão, carne seca e queijo-coalho.
+            </p>
+
+          </div>
+
+        </div>
+      </li>
+
+      <li>
+        <div class="menu-card hover:card">
+
+          <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+            <img src="img/prato-4.jpg" width="100" height="100" loading="lazy" alt="{{ $prato->nome }}"
+            class="img-cover">
+          </figure>
+
+          <div>
+
+            <div class="title-wrapper">
+              <h3 class="title-3">
+                <p class="card-title"> Arroz carreteiro</p>
+              </h3>
+              
+              <span class="span title-2">R$ 31,90</span>
+            </div>
+
+            <p class="card-text label-1">
+                Arroz, carne seca, bacon, tomate e linguiça calabresa.
+            </p>
+
+          </div>
+
+        </div>
+      </li>
+
+      <li>
+        <div class="menu-card hover:card">
+
+          <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+            <img src="img/prato-5.jpg" width="100" height="100" loading="lazy" alt="{{ $prato->nome }}"
+            class="img-cover">
+          </figure>
+
+          <div>
+
+            <div class="title-wrapper">
+              <h3 class="title-3">
+                <p class="card-title"> Strogonoff de camarão</p>
+              </h3>
+              
+              <span class="span title-2">R$ 29,90</span>
+            </div>
+
+            <p class="card-text label-1">
+                Strogonoff, arroz e batalha palha.
+            </p>
+
+          </div>
+
+        </div>
+      </li>
+
+      <li>
+        <div class="menu-card hover:card">
+
+          <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+            <img src="img/prato-6.jpg" width="100" height="100" loading="lazy" alt="{{ $prato->nome }}"
+            class="img-cover">
+          </figure>
+
+          <div>
+
+            <div class="title-wrapper">
+              <h3 class="title-3">
+                <p class="card-title"> Salmão grelhado</p>
+              </h3>
+              
+              <span class="span title-2">R$ 35,90</span>
+            </div>
+
+            <p class="card-text label-1">
+                Salmão, arroz, molho de ervas e salada.
+            </p>
+
+          </div>
+
+        </div>
+      </li>
+
+
+  </ul>
+  <div class="btn-center">
+  <button class="meu-btn">Ver Cardápio</button>
+  </div>
+  </div>
+  <img class="img-fundo1" src="img/shape-5.png" >
+  <img class="img-fundo3" src="img/shape-6.png" >
+</section>
+
+<section class="section-reservation">
+  <div class="container">
+    <div class="form reservation-form bg-black-10">
+
+      <form action="" class="form-left">
+
+        <h2 class="title-reservation headline-1 text-center">
+          Pedido de Reserva</h2>
+
+        <p class="text-form text-center">
+          
+  Pedido de Reserva <a href="tel:+88123123456" class="link">+21-9999-8888</a> ou preencha o formulário de pedido
+        </p>
+
+        <div class="input-wrapper">
+          <input type="text" name="name" placeholder="Seu Nome" autocomplete="off" class="input-field">
+
+          <input type="tel" name="phone" placeholder="Seu Número" autocomplete="off" class="input-field">
+        </div>
+
+        <div class="input-wrapper">
+
+          <div class="icon-wrapper">
+            <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+
+            <select name="person" class="input-field">
+              <option value="1-person">1 Pessoa</option>
+              <option value="2-person">2 Pessoas</option>
+              <option value="3-person">3 Pessoas</option>
+              <option value="4-person">4 Pessoas</option>
+              <option value="5-person">5 Pessoas</option>
+              <option value="6-person">6 Pessoas</option>
+              <option value="7-person">7 Pessoas</option>
+            </select>
+
+            <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
+          </div>
+
+          <div class="icon-wrapper">
+            <ion-icon name="calendar-clear-outline" aria-hidden="true"></ion-icon>
+
+            <input type="date" name="reservation-date" class="input-field">
+
+            <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
+          </div>
+
+          <div class="icon-wrapper">
+            <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+
+            <select name="person" class="input-field">
+              <option value="08:00am">08 : 00 am</option>
+              <option value="09:00am">09 : 00 am</option>
+              <option value="010:00am">10 : 00 am</option>
+              <option value="011:00am">11 : 00 am</option>
+              <option value="012:00am">12 : 00 am</option>
+              <option value="01:00pm">01 : 00 pm</option>
+              <option value="02:00pm">02 : 00 pm</option>
+              <option value="03:00pm">03 : 00 pm</option>
+              <option value="04:00pm">04 : 00 pm</option>
+              <option value="05:00pm">05 : 00 pm</option>
+              <option value="06:00pm">06 : 00 pm</option>
+              <option value="07:00pm">07 : 00 pm</option>
+              <option value="08:00pm">08 : 00 pm</option>
+              <option value="09:00pm">09 : 00 pm</option>
+              <option value="10:00pm">10 : 00 pm</option>
+            </select>
+
+            <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
+          </div>
+
+        </div>
+
+        <textarea name="message" placeholder="Mensagem" autocomplete="off" class="input-field"></textarea>
+
+        <div class="btn-center">
+        <button type="submit" class="meu-btn ">Reserve uma Mesa
+        </button>
+      </div>
+
+      </form>
+
+      <div class="form-right text-center" style="background-image: url('./assets/images/form-pattern.png')">
+
+        <h2 class="headline-1 text-center">
+          Contate-nos</h2>
+
+        <p class="contact-label">Reserve uma Mesa</p>
+
+        <a href="tel:+88123123456" class="link">+21-9999-8888</a>
+
+        <div class="separator"></div>
+
+        <p class="contact-label">Localização</p>
+
+        <address class="body-4">
+          Av. Paris, 84 - Bonsucesso, Rio de Janeiro - RJ, 21041-020
+        </address>
+
+        <p class="contact-label">Café da Manhã</p>
+
+        <p class="body-4">De Segunda a Domingo <br>
+          11.00 am - 2.30pm
+        </p>
+
+
+        <p class="contact-label">Almoço</p>
+
+        <p class="body-4">
+          De Segunda a Domingo <br>
+          11.00 am - 2.30pm
+        </p>
+
+        <p class="contact-label">Jantar</p>
+
+        <p class="body-4">
+          De Segunda a Domingo <br>
+          05.00 pm - 10.00pm
+        </p>
+
+      </div>
+
+  </div>
+</section>
+
+</article>
+</main>
+
+
+<footer class="footer section-dark">
+    <div class="container">
+  
+      <div class="row">
+        <div class="footer-col">
+          <h4>company</h4>
+          <ul>
+            <li><a href="#">Sobre nós</a></li>
+            <li><a href="#">Cardápio</a></li>
+            <li><a href="#">Reserva</a></li>
+          </ul>
+        </div>
+  
+        <div class="footer-col">
+          <h4>Horário</h4>
+          <ul>
+            <li><h5>Café da Manhã</h5><p>De Segunda A Domingo
+              11.00 Am - 2.30pm</p></li>
+            <li><h5>Almoço</h5><p>De Segunda A Domingo
+              11.00 Am - 2.30pm</p></li>
+            <li><h5>Jantar</h5><p>De Segunda A Domingo
+              05.00 Pm - 10.00pm</p></li>
+          </ul>
+        </div>
+  
+  
+        <div class="footer-col">
+          <h4>Reserva</h4>
+          <ul>
+            <li><h5>Contate-nos</h5><a href="#">+21-9999-8888</a></li>
+            <li><h5>Localização</h5><p>Av. Paris, 84 - Bonsucesso, Rio de Janeiro - RJ, 21041-020</p></li>
+          </ul>
+        </div>
+  
+        <div class="footer-col">
+          <h4>follow us</h4>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+  
+        <iframe width="100%" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14705.007942529262!2d-43.2535559!3d-22.8671481!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997c03b24d186f%3A0xf3dd300862682520!2sUniversidade%20Augusto%20Motta%20-Unisuam%20(Bonsucesso%20)!5e0!3m2!1spt-BR!2sbr!4v1713382299346!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  
+      </div>
+
+    </div>
+  </footer>
+
+
+       
+
+</body>
+</html>
