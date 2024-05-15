@@ -130,7 +130,7 @@ footer, header, hgroup, menu, nav, section {
     display: block;
 }
 html{
-    font-size: 62.50%;
+
 }
 /* Remove decoração de links */
 a {
@@ -158,7 +158,6 @@ button::-moz-focus-inner {
 /* Define o comportamento padrão para elementos com focus */
 button, input, select, textarea {
     font-size: inherit;
-    margin: 0;
     outline: none; /* Remove outline padrão */
 }
 
@@ -238,9 +237,13 @@ section {
   }
 
 .headline-1 {
-    font-size: var(--fontSize-headline-1);
+    font-size: 46px;
 } 
 
+.borda{
+    padding: 12px 8px;
+    border: 1px solid ;
+}
 
 
 .section-subtitle {
@@ -517,7 +520,7 @@ position: relative;
 }
 
 .title-3 {
-    font-size: var(--fontSize-title-3);
+    font-size: 20px;
 }
 
 .menu-card .span {
@@ -531,7 +534,7 @@ position: relative;
 }
 
 .title-2 {
-    font-size: var(--fontSize-title-2);
+    font-size: 18px;
 }
 
 .menu-card .span::before {
@@ -547,7 +550,7 @@ position: relative;
 }
 
 .label-1 {
-    font-size: var(--fontSize-label-1);
+    font-size: 16px;
 }
 
 .menu-text .section-title {
@@ -692,4 +695,21 @@ textarea.input-field {
 
 ul{
 	list-style: none;
+}
+
+.btn-login{
+    background-color: hsl(38, 61%, 73%);
+    transition: 200ms;
+   
+
+}
+
+.btn-login:hover{
+        background-color: hsl(38, 69%, 65%);
+        scale: 1.1;
+}
+
+.box{
+    color: red;
+    opacity: 1;
 }
